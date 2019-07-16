@@ -16,7 +16,7 @@ export class GradeSchool {
     if (this.kidsByGrade[grade]) {
       this.kidsByGrade[grade].push(name)
     } else {
-      this.kidsByGrade = { [grade]: [name]}
+      this.kidsByGrade = { ...this.kidsByGrade, [grade]: [name]}
     }
   }
 
