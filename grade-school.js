@@ -4,12 +4,16 @@
 //
 
 export class GradeSchool {
-  roster() {
-    return {};
+  constructor() {
+    this.kidsByGrade = {}
   }
 
-  add() {
-    throw new Error("Remove this statement and implement this function");
+  roster() {
+    return this.kidsByGrade;
+  }
+
+  add(name, grade) {
+    this.kidsByGrade = { [grade]: [name]}
   }
 
   grade() {
