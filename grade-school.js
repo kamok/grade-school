@@ -9,7 +9,7 @@ export class GradeSchool {
   }
 
   roster() {
-    return this.kidsByGrade;
+    return this.kidsByGrade
   }
 
   add(name, grade) {
@@ -20,7 +20,7 @@ export class GradeSchool {
     }
   }
 
-  grade() {
-    throw new Error("Remove this statement and implement this function");
+  grade(grade) {
+    return this.kidsByGrade[grade].sort()
   }
 }
