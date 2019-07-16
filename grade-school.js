@@ -21,6 +21,7 @@ export class GradeSchool {
   }
 
   grade(grade) {
-    return this.kidsByGrade[grade].sort()
+    const gradeList = this.kidsByGrade[grade] || [];
+    return gradeList.sort()
   }
 }
