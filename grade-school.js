@@ -13,8 +13,10 @@ export class GradeSchool {
   }
 
   add(name, grade) {
-    if (this.kidsByGrade[grade]) {
-      this.kidsByGrade[grade] = [...this.kidsByGrade[grade], name].sort()
+    const kidsInGrade = this.grade(grade);
+
+    if (kidsInGrade.length > 0) {
+      this.kidsByGrade[grade] = [...kidsInGrade, name].sort()
     } else {
       this.kidsByGrade = { ...this.kidsByGrade, [grade]: [name]}
     }
