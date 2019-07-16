@@ -14,14 +14,13 @@ export class GradeSchool {
 
   add(name, grade) {
     if (this.kidsByGrade[grade]) {
-      this.kidsByGrade[grade].push(name)
+      this.kidsByGrade[grade] = [...this.kidsByGrade[grade], name].sort()
     } else {
       this.kidsByGrade = { ...this.kidsByGrade, [grade]: [name]}
     }
   }
 
   grade(grade) {
-    const gradeList = this.kidsByGrade[grade] || [];
-    return gradeList.sort()
+    return this.kidsByGrade[grade] || [];
   }
 }
