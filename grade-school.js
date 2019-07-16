@@ -5,7 +5,7 @@
 
 export class GradeSchool {
   roster() {
-    throw new Error("Remove this statement and implement this function");
+    return {};
   }
 
   add() {
